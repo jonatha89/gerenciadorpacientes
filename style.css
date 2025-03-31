@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #007bff; /* Azul padrão */
+    --secondary-color: #0056b3; /* Azul escuro (hover) */
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --border-color: #ddd;
+    --success-color: #28a745; /* Verde para editar */
+    --danger-color: #dc3545; /* Vermelho para excluir */
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+h2 {
+    color: #555;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.paciente-actions {
+    display: flex;
+}
+
+.paciente-actions button {
+    background-color: transparent;
+    padding: 0;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.paciente-actions .editar {
+    color: var(--success-color); /* Verde */
+}
+
+.paciente-actions .editar:hover {
+    color: #218838; /* Verde escuro (hover) */
+}
+
+.paciente-actions .deletar {
+    color: var(--danger-color); /* Vermelho */
+}
+
+.paciente-actions .deletar:hover {
+    color: #c82333; /* Vermelho escuro (hover) */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Cores específicas para os botões */
+#adicionarPaciente, #registrarPresenca, #registrarAusencia, #imprimirRegistros, #imprimirFrequencia {
+    background-color: var(--primary-color); /* Azul */
+}
+
+#adicionarPaciente:hover, #registrarPresenca:hover, #registrarAusencia:hover, #imprimirRegistros:hover, #imprimirFrequencia:hover {
+    background-color: var(--secondary-color); /* Azul escuro (hover) */
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    table, ul {
+        font-size: 0.9em;
+    }
+}

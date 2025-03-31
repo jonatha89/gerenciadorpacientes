@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Pacientes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <h1>Gerenciador de Pacientes</h1>
+
+    <div id="pacientes">
+        <h2>Pacientes</h2>
+        <button id="adicionarPaciente"><i class="fas fa-plus"></i> Adicionar Paciente</button>
+        <table id="tabelaPacientes">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo de Atendimento</th>
+                    <th>Unidade</th>
+                    <th>Valor da Hora</th>
+                    <th>Horas/Dia</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="atividades" style="display: none;">
+        <h2>Atividades de <span id="nomePaciente"></span></h2>
+        <button id="adicionarAtividade"><i class="fas fa-plus"></i> Adicionar Atividade</button>
+        <table id="tabelaAtividades">
+            <thead>
+                <tr>
+                    <th>Atividade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="registros" style="display: none;">
+        <h2>Registros de <span id="nomeAtividade"></span></h2>
+        <button id="adicionarRegistro"><i class="fas fa-plus"></i> Adicionar Registro</button>
+        <button id="imprimirRegistros"><i class="fas fa-print"></i> Imprimir/PDF</button>
+        <table id="tabelaRegistros">
+            <thead>
+                <tr>
+                    <th>Estímulo</th>
+                    <th>Início</th>
+                    <th>Meta</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="frequencia" style="display: none;">
+        <h2>Frequência de <span id="nomePacienteFrequencia"></span></h2>
+        <button id="registrarPresenca"><i class="fas fa-check-circle"></i> Registrar Presença</button>
+        <button id="registrarAusencia"><i class="fas fa-times-circle"></i> Registrar Ausência</button>
+        <table id="tabelaFrequencia">
+            <thead>
+                <tr>
+                    <th>Dia do Atendimento</th>
+                    <th>Presença</th>
+                    <th>Horas/Dia</th>
+                    <th>Valor da Hora</th>
+                    <th>Total</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <th>Totais:</th>
+                    <th id="totalPresenca">0</th>
+                    <th id="totalHorasDia">0</th>
+                    <th colspan="1"></th>
+                    <th id="totalFaturamento">0</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
